@@ -7,10 +7,12 @@ body {
 
 .container {
     width: 80%;
-    margin: 50px auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    heigth:10%;
+    background-color: #aaa;
+    border:4px solid black;
+    position:relative;
+    top:0px;
+    left:0px;
 }
 
 header {
