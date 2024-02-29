@@ -6,6 +6,7 @@ body {
 }
 
 .container {
+    color: blue;
     width: 80%;
     height: 10%;
     background-color: #aaa;
