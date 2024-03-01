@@ -9,7 +9,7 @@ var player = {
   speed: 5
 };
 
-// Event listener for keyboard input
+
 document.addEventListener("keydown", function(event) {
   switch(event.key) {
     case "w":
