@@ -14,10 +14,13 @@
 
 
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Hide scrollbars */
 }
 
 canvas {
+  display: block; /* Remove default whitespace */
+  margin: auto; /* Center the canvas */
   border: 1px solid black;
 }
