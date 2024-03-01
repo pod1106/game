@@ -1,15 +1,44 @@
-window.onload = function() {
-  var canvas = document.getElementById("gameCanvas");
-  var ctx = canvas.getContext("2d");
+var canvas = document.getElementById("gameCanvas");
+var ctx = canvas.getContext("2d");
 
-  ctx.fillStyle = "skyblue";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  ctx.fillStyle = "green";
-  ctx.fillRect(0, canvas.height - 50, canvas.width, 50);
-
-  ctx.fillStyle = "yellow";
-  ctx.beginPath();
-  ctx.arc(canvas.width / 2, canvas.height / 2, 50, 0, Math.PI * 2);
-  ctx.fill();
+var player = {
+  x: 50,
+  y: 50,
+  width: 50,
+  height: 50,
+  speed: 5
 };
+
+// Event listener for keyboard input
+document.addEventListener("keydown", function(event) {
+  switch(event.key) {
+    case "w":
+      player.y -= player.speed;
+      break;
+    case "a":
+      player.x -= player.speed;
+      break;
+    case "s":
+      player.y += player.speed;
+      break;
+    case "d":
+      player.x += player.speed;
+      break;
+  }
+});
+
+// Main game loop
+function gameLoop() {
+  // Clear the canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  // Draw the player
+  ctx.fillStyle = "blue";
+  ctx.fillRect(player.x, player.y, player.width, player.height);
+  
+  // Request next frame
+  requestAnimationFrame(gameLoop);
+}
+
+// Start the game loop
+gameLoop();
