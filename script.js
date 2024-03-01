@@ -3,7 +3,7 @@ var ctx = canvas.getContext("2d");
 
 // Load player image
 var playerImg = new Image();
-playerImg.src = "./images/2_of_clubs.png"; // Replace "player.png" with the path to your player image
+playerImg.src = "images/2_of_clubs.png"; // Replace "player.png" with the path to your player image
 
 var player = {
   x: 50,
